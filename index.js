@@ -1,8 +1,10 @@
 const express = require('express')
 const path = require('path')
 const expressHbs = require('express-handlebars');
+const bodyParser = require('body-parser')
 
 const app = express();
+
 
 const hbs = expressHbs.create({
     layoutsDir: path.join(__dirname, 'views/layouts'),
@@ -15,6 +17,9 @@ app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'Handlebars-StaticFiles')))
 
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 app.get('/', (req, res) => {
     res.render('index', {author: 'Nhom 03'})
 })
@@ -25,7 +30,7 @@ app.get('/task1', (req, res) => {
 })
 
 app.get('/task2', (req, res) => {
-    let salary = parseFloat(req.query.salary || 0);
+    let salary = parseFloat(req.body.salary || 0);
     arr=[]
     for (var i = 0; i < jars.length; i++){
         arr.push(salary * jars[i].cntValue /100);
@@ -35,6 +40,12 @@ app.get('/task2', (req, res) => {
 })
 
 app.get('/task3', (req, res) => {
+    let category = req.query.cat || 0;
+    res.locals.categories = categories;
+    res.locals.products = products;
+    if (category){
+        res.locals.products = products.filter(item => item.category == category)
+    }
     res.render('task3', {author: ''})
 })
 
