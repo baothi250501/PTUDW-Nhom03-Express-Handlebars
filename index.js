@@ -25,7 +25,7 @@ app.get('/task1', (req, res) => {
 })
 
 app.get('/task2', (req, res) => {
-    let salary = req.query.salary;
+    let salary = parseFloat(req.query.salary || 0);
     arr=[]
     for (var i = 0; i < jars.length; i++){
         arr.push(salary * jars[i].cntValue /100);
