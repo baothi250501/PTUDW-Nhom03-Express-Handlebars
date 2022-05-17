@@ -26,17 +26,32 @@ app.get('/', (req, res) => {
 
 const {emotions, jars, categories, products, zodiacs} = require('./data')
 app.get('/task1', (req, res) => {
-    res.render('task1', {emotions, author: '19120376 - Nguyen Le Bao Thi'})
+    res.locals.emotions = emotions;
+    res.render('task1', {author: ''})
 })
 
+
+//FORM METHOD GET
 app.get('/task2', (req, res) => {
-    let salary = parseFloat(req.body.salary || 0);
-    arr=[]
+    let salary = parseFloat(req.query.salary || 0);
+    console.log(salary);
     for (var i = 0; i < jars.length; i++){
-        arr.push(salary * jars[i].cntValue /100);
+        jars[i].jar = salary * jars[i].cntValue /100;
     }
-    res.locals.jarsVal = arr
-    res.render('task2', {jars, author: ''})
+    res.locals.jars = jars;
+    res.render('task2', {author: ''})
+})
+
+
+//FORM METHOD POST
+app.post('/task2', (req, res) => {
+    let salary = parseFloat(req.body.salary || 0);
+    console.log(salary);
+    for (var i = 0; i < jars.length; i++){
+        jars[i].jar = salary * jars[i].cntValue /100;
+    }
+    res.locals.jars = jars;
+    res.render('task2', {author: ''})
 })
 
 app.get('/task3', (req, res) => {

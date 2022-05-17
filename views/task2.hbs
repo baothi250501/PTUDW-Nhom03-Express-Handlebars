@@ -1,7 +1,7 @@
 <!--contain-->
     <div class="container">
         <div class="page-header">
-            <form class="form-horizontal" method="get" action="">
+            <form class="form-horizontal" method="post" action="/task2">
                 <fieldset>
                     <!-- Form Name -->
                     <legend class="text-center">
@@ -33,7 +33,7 @@
                 <div class="col-md-4">
                     <img src="images{{imagePath}}" alt="{{title}}" class="img-circle img-thumbnail">
                     <h3>{{name}}<small>{{cntValue}}%</small></h3>
-                    <h2 class="jars"></h2>
+                    <h2 class="jars">{{jar}}</h2>
                 </div>
                 {{/each}}
         </div>
