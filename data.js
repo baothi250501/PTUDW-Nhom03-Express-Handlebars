@@ -21,6 +21,45 @@
       quotePath: '/task1/angry/angry1.jpg'
   }
 ];
+/* task 2 */
+const jars = [
+  {
+    name:'Necessity account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/nec.jpeg',
+    cntValue: 55
+  },
+  {
+    name:'Financial freedom account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/ffa.jpeg',
+    cntValue: 10
+  },
+  {
+    name:'Play account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/play.jpeg',
+    cntValue: 10
+  },
+  {
+    name:'Education account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/edu.jpeg',
+    cntValue: 10
+  },
+  {
+    name:'Long-term saving for spending account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/saving.jpeg',
+    cntValue: 10
+  },
+  {
+    name:'Give Account',
+    title: 'Texto Alternativo',
+    imagePath: '/task2/give.jpeg',
+    cntValue: 5
+  }
+];
 /* task 3 */
  const categories = [
   {
@@ -204,6 +243,7 @@
 
 module.exports = { 
   emotions,
+  jars,
   categories, 
   products ,
   zodiacs 

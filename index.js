@@ -19,14 +19,19 @@ app.get('/', (req, res) => {
     res.render('index', {author: 'Nhom 03'})
 })
 
-const {emotions, categories, products, zodiacs} = require('./data')
+const {emotions, jars, categories, products, zodiacs} = require('./data')
 app.get('/task1', (req, res) => {
-
     res.render('task1', {emotions, author: '19120376 - Nguyen Le Bao Thi'})
 })
 
 app.get('/task2', (req, res) => {
-    res.render('task2', {author: ''})
+    let salary = req.query.salary;
+    arr=[]
+    for (var i = 0; i < jars.length; i++){
+        arr.push(salary * jars[i].cntValue /100);
+    }
+    res.locals.jarsVal = arr
+    res.render('task2', {jars, author: ''})
 })
 
 app.get('/task3', (req, res) => {
