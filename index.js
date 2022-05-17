@@ -6,6 +6,7 @@ const app = express();
 
 const hbs = expressHbs.create({
     layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir: path.join(__dirname, 'views/partials'),
     extname: 'hbs',
     defaultLayout: 'layout'
 })
