@@ -29,39 +29,13 @@
         </div>
         <div class="container text-center">
             <div class="row stylish-panel">
+                {{#each jars}}
                 <div class="col-md-4">
-                    <img src="/images/task2/nec.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Necessity account <small>55%</small></h3>
-                    <h2 class="jars">0</h2>
+                    <img src="images{{imagePath}}" alt="{{title}}" class="img-circle img-thumbnail">
+                    <h3>{{name}}<small>{{cntValue}}%</small></h3>
+                    <h2 class="jars"></h2>
                 </div>
-                <div class="col-md-4">
-                    <img src="/images/task2/ffa.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Financial freedom account <small>10%</small></h3>
-                    <h2 class="jars">0</h2>
-                </div>
-                <div class="col-md-4">
-                    <img src="/images/task2/give.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Give Account <small>5%</small></h3>
-                    <h2 class="jars">0</h2>
-                </div>
-            </div>
-            <div class="row stylish-panel">
-                <div class="col-md-4">
-                    <img src="/images/task2/edu.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Education account <small>10%</small></h3>
-                    <h2 class="jars">0</h2>
-                </div>
-                <div class="col-md-4">
-                    <img src="/images/task2/saving.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Long-term saving for spending account <small>10%</small></h3>
-                    <h2 class="jars">0</h2>
-                </div>
-                <div class="col-md-4">
-                    <img src="/images/task2/play.jpeg" alt="Texto Alternativo" class="img-circle img-thumbnail">
-                    <h3>Play account <small>10%</small></h3>
-                    <h2 class="jars">0</h2>
-                </div>
-            </div>
+                {{/each}}
         </div>
     </div>
     <!-- /contain -->
