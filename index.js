@@ -50,10 +50,12 @@ app.get('/task3', (req, res) => {
 })
 
 app.get('/task4', (req, res) => {
+    res.locals.zodiacs = zodiacs;
     res.render('task4', {author: ''})
 })
 
-app.get('/task4-details', (req, res) => {
+app.get('/task4/:name', (req, res) => {
+    res.locals.zodiac = zodiacs.filter(item => item.name == req.params.name)[0]
     res.render('task4-details', {author: ''})
 })
 
