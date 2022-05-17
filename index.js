@@ -15,13 +15,14 @@ app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'Handlebars-StaticFiles')))
 
-
 app.get('/', (req, res) => {
     res.render('index')
 })
 
+const emotions = require('./data')
 app.get('/task1', (req, res) => {
-    res.render('task1')
+
+    res.render('task1', (emotions))
 })
 
 app.get('/task2', (req, res) => {
