@@ -1,0 +1,23 @@
+{
+  "name": "ptudw-nhom03-express-handlebars",
+  "version": "1.0.0",
+  "description": "demo express handlebars nhom03",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baothi250501/PTUDW-Nhom03-Express-Handlebars.git"
+  },
+  "author": "nhom03",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baothi250501/PTUDW-Nhom03-Express-Handlebars/issues"
+  },
+  "homepage": "https://github.com/baothi250501/PTUDW-Nhom03-Express-Handlebars#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  }
+}
