@@ -16,29 +16,29 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'Handlebars-StaticFiles')))
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {author: 'Nhom 03'})
 })
 
-const emotions = require('./data')
+const {emotions, categories, products, zodiacs} = require('./data')
 app.get('/task1', (req, res) => {
 
-    res.render('task1', (emotions))
+    res.render('task1', {emotions, author: '19120376 - Nguyen Le Bao Thi'})
 })
 
 app.get('/task2', (req, res) => {
-    res.render('task2')
+    res.render('task2', {author: ''})
 })
 
 app.get('/task3', (req, res) => {
-    res.render('task3')
+    res.render('task3', {author: ''})
 })
 
 app.get('/task4', (req, res) => {
-    res.render('task4')
+    res.render('task4', {author: ''})
 })
 
 app.get('/task4-details', (req, res) => {
-    res.render('task4-details')
+    res.render('task4-details', {author: ''})
 })
 
 app.set('port', process.env.PORT || 5000);
