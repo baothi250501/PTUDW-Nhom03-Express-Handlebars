@@ -51,7 +51,7 @@ app.post('/task2', (req, res) => {
         jars[i].jar = salary * jars[i].cntValue /100;
     }
     res.locals.jars = jars;
-    res.render('task2', {author: '19120447 - Le Pham Lan Anh'})
+    res.render('task2', {author: '19120376 - Nguyen Le Bao Thi'})
 })
 
 app.get('/task3', (req, res) => {
@@ -61,7 +61,7 @@ app.get('/task3', (req, res) => {
     if (category){
         res.locals.products = products.filter(item => item.category == category)
     }
-    res.render('task3', {author: '19120735 - Nguyen Dai Nghia'})
+    res.render('task3', {author: '19120447 - Le Pham Lan Anh'})
 })
 
 app.get('/task4', (req, res) => {
@@ -71,7 +71,7 @@ app.get('/task4', (req, res) => {
 
 app.get('/task4/:name', (req, res) => {
     res.locals.zodiac = zodiacs.filter(item => item.name == req.params.name)[0]
-    res.render('task4-details', {author: ''})
+    res.render('task4-details', {author: '19120735 - Nguyen Dai Nghia'})
 })
 
 app.set('port', process.env.PORT || 5000);
