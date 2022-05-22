@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 const {emotions, jars, categories, products, zodiacs} = require('./data')
 app.get('/task1', (req, res) => {
     res.locals.emotions = emotions;
-    res.render('task1', {author: ''})
+    res.render('task1', {author: '19120040 - Huynh Ngo Trung Truc'})
 })
 
 
@@ -39,7 +39,7 @@ app.get('/task2', (req, res) => {
         jars[i].jar = salary * jars[i].cntValue /100;
     }
     res.locals.jars = jars;
-    res.render('task2', {author: ''})
+    res.render('task2', {author: '19120376 - Nguyen Le Bao Thi'})
 })
 
 
@@ -51,7 +51,7 @@ app.post('/task2', (req, res) => {
         jars[i].jar = salary * jars[i].cntValue /100;
     }
     res.locals.jars = jars;
-    res.render('task2', {author: ''})
+    res.render('task2', {author: '19120447 - Le Pham Lan Anh'})
 })
 
 app.get('/task3', (req, res) => {
@@ -61,7 +61,7 @@ app.get('/task3', (req, res) => {
     if (category){
         res.locals.products = products.filter(item => item.category == category)
     }
-    res.render('task3', {author: ''})
+    res.render('task3', {author: '19120735 - Nguyen Dai Nghia'})
 })
 
 app.get('/task4', (req, res) => {
