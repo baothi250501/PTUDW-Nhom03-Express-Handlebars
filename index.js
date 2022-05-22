@@ -66,7 +66,7 @@ app.get('/task3', (req, res) => {
 
 app.get('/task4', (req, res) => {
     res.locals.zodiacs = zodiacs;
-    res.render('task4', {author: ''})
+    res.render('task4', {author: '19120735 - Nguyen Dai Nghia'})
 })
 
 app.get('/task4/:name', (req, res) => {
